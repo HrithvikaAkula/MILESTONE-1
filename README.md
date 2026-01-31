@@ -1,4 +1,4 @@
-# AI Research Insight Hub  
+# AI paper research manager
 ### An AI-Driven System for Research Paper Understanding and Analysis
 
 ---

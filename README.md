@@ -1,104 +1,184 @@
-# AI Research Insight Hub
-
-A powerful, full-stack application for managing, summarizing, and querying research papers using advanced AI. This project combines a modern React frontend with a robust Django backend to provide PDF text extraction, AI-powered summarization, technical insight extraction, and semantic search.
-
-## ✨ Features
-
-- **PDF Parsing**: Client-side parsing for speed and privacy.
-- **AI Summarization**: Generates structured summaries (Abstract, Findings, Methodology, Limitations).
-- **Technical Insights**: Extracts deep technical concepts, objectives, and conclusions.
-- **Semantic Search**: Ask natural language questions across your document library.
-- **Chat with AI**: Context-aware Q&A with your documents, supporting multiple languages.
-- **Voice Interaction**: Native Speech-to-Text and Text-to-Speech capabilities for hands-free research.
-- **Responsive Design**: Beautiful, modern UI built with Tailwind CSS.
-
----
-*Created by Ashish *
-
-## 🛠️ Prerequisites
-
-Before running the project, ensure you have the following installed:
-- **Node.js** (v18 or higher)
-- **Python** (v3.10 or higher)
-- **Git**
-
-You will also need an **OpenRouter API Key** (Get one from [OpenRouter](https://openrouter.ai/)).
+# AI Research Insight Hub  
+### An AI-Driven System for Research Paper Understanding and Analysis
 
 ---
 
-## 🚀 Local Development Guide
+## 1. Introduction
 
-Follow these steps to run the application locally on your machine.
+AI Research Insight Hub is a full-stack web application developed to assist researchers and students in understanding academic research papers efficiently. Research papers are often lengthy, technical, and time-consuming to analyze. This project aims to reduce manual effort by applying Artificial Intelligence to extract, summarize, and query research documents in a structured and interactive manner.
 
-### 1. Setup the Backend (Django)
-
-The backend handles AI processing and API requests.
-
-1.  **Navigate to the project root**:
-    ```bash
-    cd researchpaper_demo
-    ```
-
-2.  **Create a virtual environment** (recommended):
-    ```bash
-    python -m venv venv
-    
-    # Windows
-    .\venv\Scripts\activate
-    
-    # Mac/Linux
-    source venv/bin/activate
-    ```
-
-3.  **Install Python dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Configure Environment Variables**:
-    - Create a `.env` file in the root directory (if it doesn't exist).
-    - Add your OpenRouter API key:
-      ```env
-      OPENROUTER_API_KEY=your_actual_api_key_here
-      ```
-
-5.  **Run Database Migrations**:
-    ```bash
-    python research_backend/manage.py migrate
-    ```
-
-6.  **Start the Backend Server**:
-    ```bash
-    python research_backend/manage.py runserver
-    ```
-    The backend will start at `http://127.0.0.1:8000/`.
-
-### 2. Setup the Frontend (React + Vite)
-
-The frontend provides the user interface.
-
-1.  **Open a new terminal window** (keep the backend running).
-
-2.  **Navigate to the project root**:
-    ```bash
-    cd researchpaper_demo
-    ```
-
-3.  **Install Node dependencies**:
-    ```bash
-    npm install
-    ```
-
-4.  **Start the Development Server**:
-    ```bash
-    npm run dev
-    ```
-
-5.  **Access the Application**:
-    Open your browser and go to the URL shown in the terminal (usually `http://localhost:1000/`).
+The system enables users to upload research papers in PDF format and interact with them using AI-powered summaries, semantic search, and conversational querying.
 
 ---
 
-## 📄 License
+## 2. Problem Statement
 
-This project is licensed under the MIT License.
+Traditional research paper analysis involves:
+- Manual reading of large and complex documents
+- Difficulty in identifying key contributions quickly
+- Limited ability to search semantically across multiple papers
+- No interactive or conversational access to document content
+
+These challenges increase time consumption and reduce research productivity.
+
+---
+
+## 3. Objectives of the Project
+
+The primary objectives of this project are:
+
+- To automate extraction of textual content from research papers
+- To generate structured AI-based summaries for quick understanding
+- To extract technical insights such as objectives, methods, and conclusions
+- To enable semantic search and natural language querying
+- To provide an interactive and user-friendly research interface
+- To support voice-based interaction for accessibility
+
+---
+
+## 4. Proposed Solution
+
+The proposed solution is a web-based AI research assistant that integrates:
+- PDF text extraction
+- AI-powered summarization
+- Semantic understanding using large language models
+- Conversational and voice-enabled interaction
+
+The system converts static research documents into interactive knowledge sources, allowing users to explore content efficiently.
+
+---
+
+## 5. System Architecture Overview
+
+The application follows a modular client–server architecture:
+
+- **Frontend Layer**
+  - Handles user interaction, PDF upload, and visualization
+  - Performs client-side text extraction for efficiency
+
+- **Backend Layer**
+  - Manages AI processing and API communication
+  - Handles summarization, insights extraction, and search queries
+
+- **AI Integration Layer**
+  - Uses OpenRouter API to access large language models
+  - Generates summaries, answers, and semantic interpretations
+
+---
+
+## 6. Functional Modules
+
+### 6.1 PDF Processing Module
+- Accepts research papers in PDF format
+- Extracts text content for further analysis
+
+### 6.2 AI Summarization Module
+- Produces structured summaries including:
+  - Abstract
+  - Key Findings
+  - Methodology
+  - Limitations
+
+### 6.3 Technical Insight Extraction
+- Identifies core research objectives
+- Extracts important concepts and conclusions
+
+### 6.4 Semantic Search Module
+- Supports natural language questions
+- Retrieves context-aware answers across documents
+
+### 6.5 Conversational Interface
+- Enables chat-based interaction with research content
+- Supports multilingual responses
+
+### 6.6 Voice Interaction Module
+- Speech-to-Text for query input
+- Text-to-Speech for output delivery
+
+---
+
+## 7. Technology Stack
+
+### Frontend Technologies
+- React
+- Vite
+- Tailwind CSS
+
+### Backend Technologies
+- Django
+- Django REST Framework
+
+### AI & NLP Tools
+- OpenRouter API
+- Large Language Models (LLMs)
+- Semantic search techniques
+
+---
+
+## 8. Implementation Environment
+
+### Software Requirements
+- Node.js (v18 or higher)
+- Python (v3.10 or higher)
+- Git
+
+### API Configuration
+- OpenRouter API key required for AI features
+- Configured using environment variables
+
+---
+
+## 9. Deployment and Execution
+
+### Backend Execution
+```bash
+python research_backend/manage.py migrate
+python research_backend/manage.py runserver
+Frontend Execution
+npm install
+npm run dev
+10. Use Cases
+Academic research and literature review
+
+Thesis and dissertation preparation
+
+Technical paper analysis
+
+AI-assisted knowledge extraction
+
+Hands-free research using voice interaction
+
+11. Outcomes and Benefits
+Reduced time required to understand research papers
+
+Improved accuracy in identifying key insights
+
+Interactive and user-friendly research workflow
+
+Enhanced productivity for researchers and students
+
+12. Learning Outcomes
+Through this project, the following skills were developed:
+
+Full-stack application development
+
+REST API design using Django
+
+Integration of AI services into real-world applications
+
+Semantic search and NLP concepts
+
+System design and modular architecture
+
+Research-oriented problem solving
+
+13. Future Enhancements
+Support for multiple document comparison
+
+Citation-aware summarization
+
+User authentication and document history
+
+Advanced visualization of research insights
+
+Offline document processing support
